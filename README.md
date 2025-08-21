@@ -1,36 +1,58 @@
-🚀 Autonomous AI Agent System
+# 🤖 Autonomous AI Agent System
 
-An AI-powered autonomous agent that answers employee-related queries from structured data and seamlessly falls back to web search when information is unavailable. Built with LangChain, Google Gemini, and Tavily Search API, this system delivers context-aware, multi-turn conversations with memory.
+An AI-powered conversational agent that answers employee-related queries from a structured dataset and seamlessly falls back to **web search** when the dataset lacks information. Built with **LangChain**, **Google Gemini**, and **Tavily Search API**, this system supports **multi-turn, context-aware conversations** with memory.
 
-✨ Features
+---
 
-Query employee dataset (salary, role counts, highest/lowest paid employees, etc.)
+## 🚀 Features
 
-Fallback to Tavily API when dataset lacks answers
+- 📊 Query structured employee dataset (salary, role counts, highest/lowest paid employees, etc.)
+- 🌐 Web search fallback via **Tavily API**
+- 🧠 Conversational memory with LangChain’s **ConversationBufferMemory**
+- ⚡ Reasoning powered by **Google Gemini (Gemini-2.5-pro)**
+- 🔌 Extensible tool-based architecture for adding new capabilities
 
-Maintain multi-turn conversational memory
+---
 
-Powered by Google Gemini for natural reasoning
+## 🧠 How It Works
 
-📂 Project Structure
-autonomous-AI-agent-system/
-│── app.py                # Main entry point
-│── requirements.txt      # Dependencies
-│── .env                  # API keys
-│── .gitignore            # Ignore sensitive files
-│
-├── data/
-│   └── employee_data.csv # Employee dataset
-│
-├── utils/
-│   ├── __init__.py
-│   ├── employee_tools.py # Employee lookup logic
-│   ├── web_tools.py      # Tavily search logic
-│
-├── agents/
-│   ├── __init__.py
-│   ├── memory.py         # ConversationBufferMemory setup
-│   ├── prompts.py        # System prompts
-│   ├── initializer.py    # Agent initialization
-│
-└── README.md             # Documentation
+1. **Dataset Lookup:** Uses Pandas to query structured employee data  
+2. **LLM Reasoning:** Google Gemini generates natural responses  
+3. **Memory:** Conversation history maintained with LangChain memory  
+4. **Web Search:** Tavily API provides real-time fallback information  
+5. **Agent Orchestration:** LangChain coordinates tools + LLM for smooth interaction  
+
+---
+
+## ⚙️ Tech Stack
+
+- 🧠 [LangChain](https://www.langchain.com/) – Agent orchestration  
+- 🔮 [Google Gemini](https://deepmind.google/technologies/gemini/) – LLM reasoning  
+- 🌐 [Tavily Search](https://tavily.com/) – Web search integration  
+- 🐼 [Pandas](https://pandas.pydata.org/) – Dataset queries  
+- 🐍 Python  
+
+---
+## Example Queries
+
+How many Data Scientists do we have?
+
+What is the average salary of a Software Engineer?
+
+Who is the highest paid employee?
+
+What is the lowest salary in the company?
+
+Give me today’s latest AI news.
+
+👉 Type exit to quit the program.
+
+## 🙌 Acknowledgements
+
+LangChain
+
+Google Gemini
+
+Tavily Search
+
+Pandas
